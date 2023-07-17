@@ -1,0 +1,44 @@
+{
+    "name": "angularjs-tabs-current",
+    "version": "1.0.0",
+    "description": "Dummy project for AngularJs with AngualarUI Tabs - Current version",
+    "main": "index.js",
+    "scripts": {
+        "clean": "npx rimraf src/dist",
+        "prestart": "npm run clean",
+        "webpack:watch": "webpack --watch",
+        "webpack-server:start": "webpack serve --hot --open",
+        "http-server:start": "http-server ./src -a localhost -p 8000 -o -c-1",
+        "start": "npm-run-all --parallel webpack:watch webpack-server:start",
+        "build": "webpack",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "PGonzalez",
+    "license": "ISC",
+    "dependencies": {
+        "@popperjs/core": "^2.9.2",
+        "angular": "^1.2.9",
+        "angular-animate": "^1.2.9",
+        "angular-route": "^1.2.9",
+        "angular-touch": "^1.2.9",
+        "bootstrap": "^3.2.0",
+        "jquery": "^1.11.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.14.8",
+        "@babel/preset-env": "^7.14.8",
+        "babel-loader": "^9.1.3",
+        "cpx": "^1.5.0",
+        "css-loader": "^6.2.0",
+        "expose-loader": "^4.1.0",
+        "html-loader": "^4.2.0",
+        "http-server": "^14.1.1",
+        "npm-run-all": "^4.1.5",
+        "sass": "^1.36.0",
+        "sass-loader": "^13.3.2",
+        "style-loader": "^3.2.1",
+        "webpack": "^5.47.1",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.15.1"
+    }
+}
