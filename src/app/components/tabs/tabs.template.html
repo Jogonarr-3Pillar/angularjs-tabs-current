@@ -1,17 +1,94 @@
-<tabset>
-    <tab heading="Static title">Static content</tab>
-    <tab
-        ng-repeat="tab in tabs"
-        heading="{{tab.title}}"
-        active="tab.active"
-        disabled="tab.disabled"
-    >
-        {{tab.content}}
-    </tab>
-    <tab select="alertMe()">
-        <tab-heading>
-            <i class="glyphicon glyphicon-bell"></i> Alert!
-        </tab-heading>
-        I've got an HTML heading, and a select callback. Pretty cool!
-    </tab>
-</tabset>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">ui-bootstrap Example</h2>
+    </div>
+    <div class="panel-body">
+        <tabset>
+            <tab heading="Static title">Static content</tab>
+            <tab
+                ng-repeat="tab in tabs"
+                heading="{{tab.title}}"
+                active="tab.active"
+                disabled="tab.disabled"
+            >
+                {{tab.content}}
+            </tab>
+            <tab select="alertMe()">
+                <tab-heading>
+                    <i class="glyphicon glyphicon-bell"></i> Alert!
+                </tab-heading>
+                I've got an HTML heading, and a select callback. Pretty cool!
+            </tab>
+        </tabset>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Random Example</h2>
+    </div>
+    <div class="panel-body">
+        <div id="tabs">
+            <ul role="tablist">
+                <li role="presentation">
+                    <span
+                        tabindex="0"
+                        id="tab-1"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="tab-1-content"
+                    >
+                        Tab 1
+                    </span>
+                </li>
+                <li role="presentation">
+                    <span
+                        tabindex="0"
+                        id="tab-2"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="tab-2-content"
+                    >
+                        Tab 2
+                    </span>
+                </li>
+                <li role="presentation">
+                    <span
+                        tabindex="0"
+                        id="tab-3"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="tab-3-content"
+                    >
+                        Tab 3
+                    </span>
+                </li>
+                <li role="presentation">
+                    <span
+                        tabindex="0"
+                        id="tab-4"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="tab-4-content"
+                    >
+                        Tab 4
+                    </span>
+                </li>
+            </ul>
+            <div id="tab-content">
+                <div id="tab-1-content" role="tabpanel" aria-labelledby="tab-1">
+                    Tab 1 Content
+                </div>
+                <div id="tab-2-content" role="tabpanel" aria-labelledby="tab-2">
+                    Tab 2 Content
+                </div>
+                <div id="tab-3-content" role="tabpanel" aria-labelledby="tab-3">
+                    Tab 3 Content
+                </div>
+                <div id="tab-4-content" role="tabpanel" aria-labelledby="tab-4">
+                    Tab 4 Content
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
